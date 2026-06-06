@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A-Designs | Premium Websites for Local Businesses</title>
+  <meta name="description" content="A-Designs builds premium conversion-focused websites for local businesses that want more calls, bookings, and customers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+<style>
+/* Shared A-Designs top navigation */
+.global-site-nav{position:sticky;top:14px;z-index:999;width:min(1540px,94vw);margin:14px auto 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 18px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(4,5,12,.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 22px 80px rgba(0,0,0,.42)}
+.global-logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:950;font-size:clamp(1.05rem,1.7vw,1.45rem);letter-spacing:-.04em;white-space:nowrap}
+.global-logo span{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#ffd36a,#ff7a2f 48%,#fb4da1);color:#07070c;font-weight:950}
+.global-nav-links{display:flex;align-items:center;gap:clamp(14px,2vw,30px)}
+.global-nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-weight:850;font-size:clamp(.9rem,1.05vw,1.05rem);transition:.22s ease}
+.global-nav-links a:hover{color:#fff;transform:translateY(-1px)}
+.global-instagram{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:auto;min-width:52px;height:52px;padding:0 15px;border-radius:999px;background:linear-gradient(135deg,#ffd36a,#f97316 42%,#fb4da1 72%,#7c3aed);box-shadow:0 16px 42px rgba(251,77,161,.28);color:#fff;text-decoration:none;flex:0 0 auto}
+.global-instagram svg{width:23px;height:23px;fill:currentColor;flex:0 0 auto}.global-instagram span{font-size:.9rem;font-weight:900;letter-spacing:-.01em;color:#fff;white-space:nowrap}
+.global-nav-cta{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;border-radius:999px;background:linear-gradient(135deg,#ffd36a,#ff9a63 45%,#fb4da1);color:#09080e!important;text-decoration:none;font-weight:950;white-space:nowrap;box-shadow:0 16px 44px rgba(251,77,161,.22);transition:.22s ease}
+.global-nav-cta:hover{transform:translateY(-2px);box-shadow:0 24px 64px rgba(251,77,161,.30)}
+@media(max-width:980px){.global-site-nav{border-radius:28px;align-items:flex-start;flex-wrap:wrap}.global-nav-links{order:4;width:100%;justify-content:center;flex-wrap:wrap;gap:10px}.global-nav-links a{padding:8px 10px;border:1px solid rgba(255,255,255,.10);border-radius:999px;background:rgba(255,255,255,.04)}.global-nav-cta{padding:12px 16px}.global-instagram{min-width:46px;height:46px;padding:0 13px}}
+@media(max-width:620px){.global-site-nav{width:min(100% - 22px,1540px);padding:12px}.global-logo{font-size:1.05rem}.global-logo span{width:36px;height:36px;border-radius:12px}.global-instagram{min-width:42px;height:42px;padding:0 11px}.global-instagram span{display:none}.global-nav-cta{width:100%;order:3}.global-nav-links{display:none}}
+</style>
+<style>
+/* Fixed/sticky navbar spacing fix: keeps preview-gallery headings from sitting under the top navigation */
+.restaurant-gallery-wrap,
+.restaurant-board,
+.preview-wrap,
+.all-demos-shell{
+  padding-top: clamp(150px, 11vw, 190px) !important;
+}
+.restaurant-gallery-head,
+.restaurant-board-head,
+.preview-hero,
+.all-demos-hero{
+  margin-top: 0 !important;
+}
+@media(max-width:980px){
+  .restaurant-gallery-wrap,
+  .restaurant-board,
+  .preview-wrap,
+  .all-demos-shell{
+    padding-top: 42px !important;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="bg-blob blob-a" data-parallax="0.18"></div>
+  <div class="bg-blob blob-b" data-parallax="0.10"></div>
+  <div class="bg-blob blob-c" data-parallax="0.06"></div>
+
+  <header class="nav" id="top">
+    <a href="#home" class="logo" aria-label="A-Designs home"><span>A</span>-Designs</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#work">Demos</a>
+      <a href="#proof">Results</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Packages</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="mobile-menu-cta">Get Free Mockup</a>
+    </nav>
+    <a class="instagram-link" href="https://www.instagram.com/adesignshalifax?igsh=MTZwd2huajMwZjdxbA%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Open A-Designs on Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.3A4.7 4.7 0 1 1 12 16.7a4.7 4.7 0 0 1 0-9.4Zm0 2A2.7 2.7 0 1 0 12 14.7a2.7 2.7 0 0 0 0-5.4Zm5-2.15a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg>
+      <span>@adesignshalifax</span>
+    </a>
+    <a href="#contact" class="nav-cta">Get Free Mockup</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-padding">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Premium website agency for local businesses</p>
+        <h1>We build websites that make local businesses look trusted, premium, and ready to book.</h1>
+        <p class="hero-subtitle">A-Designs creates high-converting 3D websites for restaurants, salons, cafés, contractors, clinics, and service businesses that want more calls, bookings, quote requests, and customers.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn primary">Get My Free Homepage Mockup</a>
+          <a href="#work" class="btn secondary">View Demo Websites</a>
+          <a href="tel:+19029894072" class="btn secondary hero-phone-link">☎ Call: 902-989-4072</a>
+        </div>
+        <div class="authority-strip">
+          <div><strong>7–14 Days</strong><span>fast turnaround</span></div>
+          <div><strong>Mobile First</strong><span>built for phone users</span></div>
+          <div><strong>Free Mockup</strong><span>see it before paying</span></div><div><strong>Halifax Based</strong><span>built for local businesses</span></div>
+        </div>
+        <p class="micro-trust">Only taking 5 new local businesses this month. Start with a free homepage concept before you commit.</p>
+      </div>
+
+      <div class="hero-visual hero-visual-clean reveal delay-1 parallax-layer" data-parallax="0.08">
+        <div class="clean-browser tilt-card">
+          <div class="clean-browser-top"><span></span><span></span><span></span></div>
+          <div class="clean-browser-body">
+            <aside class="clean-side-nav">
+              <div class="side-item active"><b>⌂</b><span>Home</span></div>
+              <div class="side-item"><b>↗</b><span>Services</span></div>
+              <div class="side-item"><b>▣</b><span>Demos</span></div>
+              <div class="side-item"><b>☰</b><span>Results</span></div>
+              <div class="side-item"><b>✉</b><span>Contact</span></div>
+            </aside>
+
+            <div class="clean-hero-copy">
+              <div class="screen-pill clean-pill">✦ Lead-focused website</div>
+              <h3>Turn visitors into <span>calls, bookings</span> & quote requests.</h3>
+              <p>High-converting websites for local businesses that need more leads, bookings, and revenue.</p>
+
+              <div class="clean-feature-row">
+                <div><i>↗</i><strong>More Leads</strong><small>Clear CTAs</small></div>
+                <div><i>◈</i><strong>Premium Look</strong><small>Modern 3D</small></div>
+                <div><i>●</i><strong>Local Ready</strong><small>Maps & forms</small></div>
+              </div>
+
+              <div class="clean-actions">
+                <a href="#contact" class="btn primary">Book a Free Mockup →</a>
+                <a href="tel:+19029894072" class="btn secondary">☎ Call Today</a>
+              </div>
+            </div>
+
+            <div class="restaurant-preview-card">
+              <div class="preview-top"><span></span><span></span><span></span><small>TasteHouse</small><b>Book Now</b></div>
+              <div class="preview-main">
+                <div class="preview-text">
+                  <small>WELCOME TO TASTE HOUSE</small>
+                  <h4>Delicious food,<br><em>great experience</em><br>every time.</h4>
+                  <p>Fresh ingredients. Perfect taste. Made for you.</p>
+                  <div><button>Book a Table</button><button>View Menu</button></div>
+                </div>
+                <div class="food-plate"><span></span></div>
+              </div>
+              <div class="preview-features">
+                <div><strong>Fresh</strong><small>ingredients</small></div>
+                <div><strong>Fast</strong><small>service</small></div>
+                <div><strong>Top Rated</strong><small>reviews</small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clean-bottom-bar">
+            <div><strong>7–14 Days</strong><span>Fast turnaround</span></div>
+            <div><strong>Mobile First</strong><span>Built for phone users</span></div>
+            <div><strong>100%</strong><span>Lead focused</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logos section-padding-xs reveal">
+      <p>Built for local businesses like</p>
+      <div class="logo-strip"><span>Restaurants</span><span>Salons</span><span>Barbers</span><span>Clinics</span><span>Contractors</span><span>Cafés</span></div>
+    </section>
+
+    <section id="work" class="work section-padding">
+      <div class="section-header reveal demo-title-block">
+        <p class="eyebrow"><span></span> Premium demo websites</p>
+        <h2>Built to convert before they pay.</h2>
+        <p>Each demo includes realistic trust signals, clear CTAs, service details, reviews, and contact sections so business owners can picture a real customer-ready website.</p>
+      </div>
+
+      <div class="demo-showcase-grid">
+        <article class="demo-showcase-card reveal">
+          <div class="demo-card-header">
+            <div class="demo-icon">🍽️</div>
+            <div><h3>Restaurant / Café</h3><p>Food ordering, reservations, menus & local discovery.</p></div>
+            <a href="all-demos.html">View all demos →</a>
+          </div>
+          <div class="demo-realism-strip"><span>★★★★★ 4.9 Reviews</span><span>Menu + booking flow</span><span>Halifax-ready contact</span></div>
+          <div class="website-preview-stack">
+            <div class="website-preview-item"><img src="assets/restaurant-spice-house.png" alt="Spice House restaurant website homepage demo"><div><strong>Spice House</strong><a href="restaurant-spice-house.html">Live Preview ↗</a></div></div>
+            <div class="website-preview-item"><img src="assets/restaurant-urban-cafe.png" alt="Urban Café website homepage demo"><div><strong>Urban Café</strong><a href="restaurant-urban-cafe.html">Live Preview ↗</a></div></div>
+          </div>
+        </article>
+
+        <article class="demo-showcase-card reveal delay-1">
+          <div class="demo-card-header">
+            <div class="demo-icon pink">✂️</div>
+            <div><h3>Salon / Barbershop</h3><p>Booking systems, grooming, services & offers.</p></div>
+            <a href="all-demos.html">View all demos →</a>
+          </div>
+          <div class="demo-realism-strip"><span>Online booking</span><span>Services + pricing</span><span>Trust-focused layout</span></div>
+          <div class="website-preview-stack">
+            <div class="website-preview-item"><img src="assets/kings-barbers-realistic-demo.png" alt="Realistic Kings Barbers barbershop website homepage screenshot demo"><div><strong>Kings Barbers</strong><a href="kings-barbers.html">Live Preview ↗</a></div></div>
+            <div class="website-preview-item"><img src="assets/salon-luxe-hair.png" alt="Luxe Hair salon website homepage demo"><div><strong>Luxe Hair</strong><a href="luxe-hair.html">Live Preview ↗</a></div></div>
+          </div>
+        </article>
+
+        <article class="demo-showcase-card reveal delay-2">
+          <div class="demo-card-header">
+            <div class="demo-icon blue">💼</div>
+            <div><h3>Local Services</h3><p>Quote requests, service pages, projects & trust builders.</p></div>
+            <a href="all-demos.html">View all demos →</a>
+          </div>
+          <div class="demo-realism-strip"><span>Quote requests</span><span>Project gallery</span><span>Reviews + service areas</span></div>
+          <div class="website-preview-stack">
+            <div class="website-preview-item"><img src="assets/service-prime-roofing.png" alt="Prime Roofing contractor website homepage demo"><div><strong>Prime Roofing</strong><a href="prime-roofing.html">Live Preview ↗</a></div></div>
+            <div class="website-preview-item"><img src="assets/service-cleanpro.png" alt="CleanPro cleaning business website homepage demo"><div><strong>CleanPro</strong><a href="cleanpro.html">Live Preview ↗</a></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="proof" class="section-padding-sm">
+      <div class="section-header reveal"><p class="eyebrow"><span></span> Trust builders</p><h2>Built to make local businesses look credible, modern, and easy to contact.</h2></div>
+      <div class="stats-row reveal"><div><strong>7–14</strong><span>day website turnaround</span></div><div><strong>100%</strong><span>mobile responsive builds</span></div><div><strong>3+</strong><span>industry demo directions</span></div><div><strong>Free</strong><span>homepage mockup</span></div></div>
+    </section>
+
+    <section id="services" class="section-padding">
+      <div class="section-header reveal"><p class="eyebrow"><span></span> What you get</p><h2>Everything needed to look premium online and capture more leads.</h2></div>
+      <div class="service-grid">
+        <div class="service-card reveal"><span>✦</span><h3>Premium 3D Web Design</h3><p>Depth, motion, gradients, glass effects, and a high-end brand feel.</p></div>
+        <div class="service-card reveal delay-1"><span>📱</span><h3>Mobile-First Layout</h3><p>Sticky CTAs, fast scanning, large tap targets, and simplified lead forms.</p></div>
+        <div class="service-card reveal delay-2"><span>⚡</span><h3>Launch Setup</h3><p>Hosting guidance, domain connection, basic SEO, and clean structure.</p></div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section-padding">
+      <div class="section-header reveal pricing-heading">
+        <p class="eyebrow"><span></span> Business growth packages</p>
+        <h2>Professional websites designed to generate customers.</h2>
+        <p>Choose the package that matches your business goals. Every project starts with a free homepage mockup so you can see the direction before committing.</p>
+      </div>
+
+      <div class="pricing-trust-row reveal">
+        <span>✓ Mobile First</span>
+        <span>✓ Halifax Based</span>
+        <span>✓ Fast Turnaround</span>
+        <span>✓ Free Mockup First</span>
+      </div>
+
+      <div class="pricing-grid premium-pricing-grid">
+        <div class="price-card premium-price-card reveal">
+          <p class="package-label">Launch Package</p>
+          <h3><small>Starting from</small>$500+</h3>
+          <span>Get Online Package</span>
+          <ul>
+            <li>Look professional online</li>
+            <li>Get more calls and messages</li>
+            <li>Mobile-optimized layout</li>
+            <li>Show up better on Google</li>
+            <li>Click-to-call buttons</li>
+          </ul>
+          <div class="risk-note">Free homepage preview before you commit.</div>
+          <a href="#contact" class="btn secondary">Start My Website</a>
+        </div>
+
+        <div class="price-card popular premium-price-card featured-price-card reveal delay-1">
+          <div class="popular-badge">Most Popular</div>
+          <p class="package-label">Growth Package</p>
+          <h3><small>Starting from</small>$1000+</h3>
+          <span>Lead Generation Website</span>
+          <ul>
+            <li>Built to increase inquiries</li>
+            <li>Clear CTAs for calls and bookings</li>
+            <li>Premium 3D visual direction</li>
+            <li>Reviews, gallery, and FAQ sections</li>
+            <li>Lead form + CTA strategy</li>
+          </ul>
+          <div class="risk-note">Best for businesses that want more leads.</div>
+          <a href="#contact" class="btn primary">Get My Free Mockup</a>
+        </div>
+
+        <div class="price-card premium-price-card reveal delay-2">
+          <p class="package-label">Authority Package</p>
+          <h3><small>Starting from</small>$2000+</h3>
+          <span>Business Growth System</span>
+          <ul>
+            <li>Build trust with a premium brand presence</li>
+            <li>Custom multi-page website</li>
+            <li>Conversion-focused copywriting</li>
+            <li>Service pages that sell clearly</li>
+            <li>30 days post-launch support</li>
+          </ul>
+          <div class="risk-note">Built specifically for your business goals.</div>
+          <a href="#contact" class="btn secondary">Book Discovery Call</a>
+        </div>
+      </div>
+
+      <p class="pricing-urgency reveal">Currently accepting 5 local projects this month. Only 2–3 custom builds are taken at a time so every client gets focused attention.</p>
+    </section>
+
+    <section id="process" class="section-padding process-section">
+      <div class="section-header reveal">
+        <p class="eyebrow"><span></span> Simple process</p>
+        <h2>From free mockup to launched website without confusion.</h2>
+        <p>A clear step-by-step process makes it easy for local business owners to understand exactly what happens after they reach out.</p>
+      </div>
+      <div class="process-timeline reveal">
+        <article><span>01</span><h3>Request Mockup</h3><p>Send your business name, industry, and contact info.</p></article>
+        <article><span>02</span><h3>Receive Homepage Concept</h3><p>You see a premium direction before committing.</p></article>
+        <article><span>03</span><h3>Approve Direction</h3><p>Pick the style, sections, and features you want.</p></article>
+        <article><span>04</span><h3>Build Website</h3><p>Your site is built mobile-first with clear CTAs.</p></article>
+        <article><span>05</span><h3>Launch & Support</h3><p>Your website goes live with support after launch.</p></article>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section-padding-sm transformations-section">
+      <div class="section-header reveal transformations-header">
+        <p class="eyebrow"><span></span> Social proof</p>
+        <h2>Real results. <em>Real transformations.</em></h2>
+        <p>See how outdated, boring websites turn into premium, high-converting experiences that make local businesses look trusted and ready to book.</p>
+      </div>
+
+      <div class="transformation-grid reveal">
+        <article class="transform-card">
+          <div class="transform-labels">
+            <div><strong>✕ Before</strong><span>Outdated. Plain. No trust.</span></div>
+            <div><strong>✓ After</strong><span>Premium. Clear. Built to convert.</span></div>
+          </div>
+          <div class="before-after-visual">
+            <div class="mini-site before-site">
+              <div class="mini-top"><span>ABC Plumbing</span><small>Home Services Contact</small></div>
+              <h4>Plumbing Services</h4>
+              <p>We provide plumbing services for your home and business.</p>
+              <button>Learn More</button>
+              <div class="boring-box"></div>
+              <ul><li>Repairs</li><li>Installations</li><li>Maintenance</li></ul>
+            </div>
+            <div class="upgrade-arrow">→</div>
+            <div class="mini-site after-site after-blue">
+              <div class="mini-top premium"><span>ABC PLUMBING</span><button>Call Now</button></div>
+              <h4>Fast, reliable plumbing solutions.</h4>
+              <p>Premium service pages, emergency CTAs, reviews, and mobile-first booking.</p>
+              <div class="premium-buttons"><button>Book Service</button><button>View Services</button></div>
+              <div class="premium-stats"><span>24/7</span><span>Licensed</span><span>5★</span></div>
+            </div>
+          </div>
+          <blockquote>“The redesign made us look professional instantly. Customers finally know what to do when they land on the site.”</blockquote>
+          <strong class="quote-name">Local Service Business</strong>
+        </article>
+
+        <article class="transform-card">
+          <div class="transform-labels">
+            <div><strong>✕ Before</strong><span>Generic menu. Weak visuals.</span></div>
+            <div><strong>✓ After</strong><span>Premium story. More bookings.</span></div>
+          </div>
+          <div class="before-after-visual">
+            <div class="mini-site before-site beige-before">
+              <div class="mini-top"><span>Our Restaurant</span><small>Home Menu About</small></div>
+              <h4>Welcome to Our Restaurant</h4>
+              <p>Best food in town. We serve delicious meals for you and your family.</p>
+              <div class="food-placeholder"></div>
+              <button>Contact</button>
+            </div>
+            <div class="upgrade-arrow">→</div>
+            <div class="mini-site after-site after-restaurant">
+              <div class="mini-top premium"><span>TASTE HOUSE</span><button>Book Table</button></div>
+              <h4>Elevated flavors. Unforgettable experiences.</h4>
+              <p>Dark luxury visuals, clear reservation flow, menu highlights, and review sections.</p>
+              <div class="premium-buttons"><button>Reserve</button><button>View Menu</button></div>
+              <div class="premium-stats"><span>Menu</span><span>Reviews</span><span>Map</span></div>
+            </div>
+          </div>
+          <blockquote>“The after version feels like a real brand, not just a basic website. It makes the business look expensive.”</blockquote>
+          <strong class="quote-name">Restaurant Mockup Feedback</strong>
+        </article>
+
+        <article class="transform-card">
+          <div class="transform-labels">
+            <div><strong>✕ Before</strong><span>No structure. No flow.</span></div>
+            <div><strong>✓ After</strong><span>Strategic. High-converting.</span></div>
+          </div>
+          <div class="before-after-visual">
+            <div class="mini-site before-site gray-before">
+              <div class="mini-top"><span>Your Business</span><small>Home Services</small></div>
+              <h4>Welcome</h4>
+              <p>We provide the best services for our clients.</p>
+              <div class="gray-photo"></div>
+              <ul><li>Service One</li><li>Service Two</li><li>Service Three</li></ul>
+            </div>
+            <div class="upgrade-arrow">→</div>
+            <div class="mini-site after-site after-purple">
+              <div class="mini-top premium"><span>Your Business</span><button>Get Quote</button></div>
+              <h4>Smart solutions for real growth.</h4>
+              <p>Clear services, strong trust points, quote form, FAQ, and conversion-focused layout.</p>
+              <div class="premium-buttons"><button>Get Quote</button><button>Our Work</button></div>
+              <div class="premium-stats"><span>200+</span><span>98%</span><span>5★</span></div>
+            </div>
+          </div>
+          <blockquote>“This is the kind of website that would make people trust the business before calling.”</blockquote>
+          <strong class="quote-name">Service Business Preview</strong>
+        </article>
+      </div>
+
+      <div class="transformation-benefits reveal delay-1">
+        <div><span>🧲</span><strong>More Leads</strong><small>Clear CTAs that convert</small></div>
+        <div><span>🛡️</span><strong>Build Trust</strong><small>Professional design that builds confidence</small></div>
+        <div><span>📱</span><strong>Mobile First</strong><small>Perfect experience on every device</small></div>
+        <div><span>🚀</span><strong>SEO Ready</strong><small>Built to get found online</small></div>
+        <div><span>📈</span><strong>Conversion Focused</strong><small>Designed to turn visitors into customers</small></div>
+      </div>
+    </section>
+
+    <section id="faq" class="section-padding-sm">
+      <div class="section-header reveal"><p class="eyebrow"><span></span> FAQ</p><h2>Questions business owners ask before starting.</h2></div>
+      <div class="faq-list reveal">
+        <details><summary>Do I have to pay before seeing anything?</summary><p>No. A-Designs can create a free homepage mockup first so you can see the direction before committing.</p></details>
+        <details><summary>Will the website work on phones?</summary><p>Yes. The site is designed mobile-first with clear buttons, simple sections, and easy contact options.</p></details>
+        <details><summary>Can you help if I only have Instagram right now?</summary><p>Yes. Your Instagram, photos, menu, service list, reviews, and Google profile can shape the website.</p></details>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-padding">
+      <div class="contact-card reveal">
+        <div>
+          <p class="eyebrow"><span></span> Start with zero pressure</p>
+          <h2>Get a free homepage mockup for your business.</h2>
+          <p>Tell us what business you own and what you want more of — calls, leads, bookings, or quote requests. We’ll contact you shortly with the next step.</p>
+          <div class="trust-badge-row"><span>✓ Free website audit</span><span>✓ Halifax-based</span><span>✓ No obligation</span><span>✓ Only 5 projects this month</span></div>
+        </div>
+        <form id="leadForm" class="lead-form" action="https://formspree.io/f/mwvjpryo" method="POST">
+          <input type="hidden" name="_subject" value="New A-Designs website lead">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <label>What business do you own?<input type="text" name="business" placeholder="Business name" required></label>
+          <label>Your Name<input type="text" name="name" placeholder="Your name" required></label>
+          <label>Best Email<input type="email" name="email" placeholder="you@example.com" required></label>
+          <label>Phone Number<input type="tel" name="phone" placeholder="(902) 000-0000"></label>
+          <label>What type of business is it?<select name="type"><option>Restaurant / Café</option><option>Salon / Barbershop</option><option>Contractor / Trades</option><option>Cleaning / Home Service</option><option>Clinic / Wellness</option><option>Other Local Business</option></select></label>
+          <fieldset class="lead-goal-group"><legend>What do you want more of?</legend><label><input type="checkbox" name="goals" value="Calls"> Calls</label><label><input type="checkbox" name="goals" value="Leads"> Leads</label><label><input type="checkbox" name="goals" value="Bookings"> Bookings</label><label><input type="checkbox" name="goals" value="Quote Requests"> Quote Requests</label></fieldset>
+          <label>Message optional<textarea name="message" rows="4" placeholder="Tell me what you want your website to do..."></textarea></label>
+          <button class="btn primary" type="submit">Send My Request</button>
+          <p class="form-note" id="formNote">Send your request and we’ll contact you shortly.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="floating-contact-bar" aria-label="Quick contact actions">
+    <a href="tel:+19029894072">☎</a>
+    <a href="https://www.instagram.com/adesignshalifax?igsh=MTZwd2huajMwZjdxbA%3D%3D&utm_source=qr" target="_blank" rel="noopener">◎</a>
+    <a href="#contact">Mockup</a>
+  </div>
+
+  <footer class="site-footer upgraded-footer">
+    <div class="footer-grid footer-grid-large">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><span>A</span>-Designs</a>
+        <p>Premium websites for Halifax and Nova Scotia local businesses that want more calls, bookings, and customers.</p>
+        <div class="footer-cta-row"><a href="#contact" class="btn primary">Get Free Mockup</a><a href="tel:+19029894072" class="btn secondary">Call 902-989-4072</a></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Website Design</a>
+        <a href="#pricing">Lead Generation Websites</a>
+        <a href="restaurant-demos.html">Restaurant Websites</a>
+        <a href="kings-barbers.html">Barber Websites</a>
+        <a href="prime-roofing.html">Roofing Websites</a>
+        <a href="cleanpro.html">Cleaning Websites</a>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#work">Demos</a>
+        <a href="all-demos.html">All Templates</a>
+        <a href="#proof">Results</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:sharwen.ahmed@yahoo.com">sharwen.ahmed@yahoo.com</a>
+        <a href="tel:+19029894072" class="footer-phone">902-989-4072</a>
+        <a class="footer-instagram" href="https://www.instagram.com/adesignshalifax?igsh=MTZwd2huajMwZjdxbA%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Open A-Designs Instagram profile">
+          <span class="footer-insta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.3A4.7 4.7 0 1 1 12 16.7a4.7 4.7 0 0 1 0-9.4Zm0 2A2.7 2.7 0 1 0 12 14.7a2.7 2.7 0 0 0 0-5.4Zm5-2.15a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg></span>
+          <span>@adesignshalifax</span>
+        </a>
+        <p class="footer-local">Based in Halifax, Nova Scotia.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

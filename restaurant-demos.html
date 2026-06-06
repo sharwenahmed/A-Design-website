@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Website Demo Gallery | A-Designs</title>
+  <meta name="description" content="Four premium restaurant website demo styles by A-Designs: minimalist, rustic Italian, Asian fusion, and Mexican street food." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+<style>
+/* Shared A-Designs top navigation */
+.global-site-nav{position:sticky;top:14px;z-index:999;width:min(1540px,94vw);margin:14px auto 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 18px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(4,5,12,.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 22px 80px rgba(0,0,0,.42)}
+.global-logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:950;font-size:clamp(1.05rem,1.7vw,1.45rem);letter-spacing:-.04em;white-space:nowrap}
+.global-logo span{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#ffd36a,#ff7a2f 48%,#fb4da1);color:#07070c;font-weight:950}
+.global-nav-links{display:flex;align-items:center;gap:clamp(14px,2vw,30px)}
+.global-nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-weight:850;font-size:clamp(.9rem,1.05vw,1.05rem);transition:.22s ease}
+.global-nav-links a:hover{color:#fff;transform:translateY(-1px)}
+.global-instagram{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:auto;min-width:52px;height:52px;padding:0 15px;border-radius:999px;background:linear-gradient(135deg,#ffd36a,#f97316 42%,#fb4da1 72%,#7c3aed);box-shadow:0 16px 42px rgba(251,77,161,.28);color:#fff;text-decoration:none;flex:0 0 auto}
+.global-instagram svg{width:23px;height:23px;fill:currentColor;flex:0 0 auto}.global-instagram span{font-size:.9rem;font-weight:900;letter-spacing:-.01em;color:#fff;white-space:nowrap}
+.global-nav-cta{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;border-radius:999px;background:linear-gradient(135deg,#ffd36a,#ff9a63 45%,#fb4da1);color:#09080e!important;text-decoration:none;font-weight:950;white-space:nowrap;box-shadow:0 16px 44px rgba(251,77,161,.22);transition:.22s ease}
+.global-nav-cta:hover{transform:translateY(-2px);box-shadow:0 24px 64px rgba(251,77,161,.30)}
+@media(max-width:980px){.global-site-nav{border-radius:28px;align-items:flex-start;flex-wrap:wrap}.global-nav-links{order:4;width:100%;justify-content:center;flex-wrap:wrap;gap:10px}.global-nav-links a{padding:8px 10px;border:1px solid rgba(255,255,255,.10);border-radius:999px;background:rgba(255,255,255,.04)}.global-nav-cta{padding:12px 16px}.global-instagram{min-width:46px;height:46px;padding:0 13px}}
+@media(max-width:620px){.global-site-nav{width:min(100% - 22px,1540px);padding:12px}.global-logo{font-size:1.05rem}.global-logo span{width:36px;height:36px;border-radius:12px}.global-instagram{min-width:42px;height:42px;padding:0 11px}.global-instagram span{display:none}.global-nav-cta{width:100%;order:3}.global-nav-links{display:none}}
+</style>
+<style>
+/* Fixed/sticky navbar spacing fix: keeps preview-gallery headings from sitting under the top navigation */
+.restaurant-gallery-wrap,
+.restaurant-board,
+.preview-wrap,
+.all-demos-shell{
+  padding-top: clamp(150px, 11vw, 190px) !important;
+}
+.restaurant-gallery-head,
+.restaurant-board-head,
+.preview-hero,
+.all-demos-hero{
+  margin-top: 0 !important;
+}
+@media(max-width:980px){
+  .restaurant-gallery-wrap,
+  .restaurant-board,
+  .preview-wrap,
+  .all-demos-shell{
+    padding-top: 42px !important;
+  }
+}
+</style>
+</head>
+<body class="restaurant-gallery-page restaurant-gallery-v2">
+<header class="global-site-nav" id="top">
+  <a href="index.html#home" class="global-logo" aria-label="A-Designs home"><span>A</span>-Designs</a>
+  <nav class="global-nav-links" aria-label="Main navigation">
+    <a href="index.html#work">Demos</a>
+    <a href="index.html#proof">Results</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#pricing">Packages</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <a class="global-instagram" href="https://www.instagram.com/adesignshalifax?igsh=MTZwd2huajMwZjdxbA%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Open A-Designs on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.3A4.7 4.7 0 1 1 12 16.7a4.7 4.7 0 0 1 0-9.4Zm0 2A2.7 2.7 0 1 0 12 14.7a2.7 2.7 0 0 0 0-5.4Zm5-2.15a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg><span>@adesignshalifax</span></a>
+  <a href="index.html#contact" class="global-nav-cta">Get Free Mockup</a>
+</header>
+
+  <a class="unique-back" href="index.html#work">← Back to A-Designs</a>
+
+  <main class="restaurant-board">
+    <header class="restaurant-board-head">
+      <p class="eyebrow"><span></span> Premium restaurant demo websites</p>
+      <h1>Four restaurant styles, four completely different directions.</h1>
+      <p>Use these live previews to show restaurant owners how their brand could look online before they commit.</p>
+    </header>
+
+    <section class="restaurant-board-grid" aria-label="Restaurant website demo previews">
+      <article class="board-item">
+        <h2>1. Modern Minimalist Restaurant</h2>
+        <div class="site-shot verde-shot">
+          <nav class="shot-nav"><strong>VERDE</strong><div><span>Home</span><span>About</span><span>Menu</span><span>Reservations</span><span>Gallery</span><span>Contact</span></div><button>Book a Table</button><a class="instagram-link" href="https://www.instagram.com/adesignshalifax?igsh=MTZwd2huajMwZjdxbA%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Open A-Designs on Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.3A4.7 4.7 0 1 1 12 16.7a4.7 4.7 0 0 1 0-9.4Zm0 2A2.7 2.7 0 1 0 12 14.7a2.7 2.7 0 0 0 0-5.4Zm5-2.15a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg>
+    </a></nav>
+          <div class="verde-main">
+            <div class="verde-copy"><small>Pure ingredients, perfectly crafted.</small><h3>Simple food.<br>Extraordinary<br>experience.</h3><p>We celebrate fresh ingredients, local farmers, and the art of tasteful cooking.</p><div class="shot-actions"><a>View Our Menu</a><a>About Us →</a></div><div class="open-card">Open Daily<br><b>5:00 PM – 11:00 PM</b></div></div>
+            <div class="fine-dish"><span></span></div>
+          </div>
+          <div class="shot-feature-bar light"><span>Fresh Ingredients<small>Sourced locally every day.</small></span><span>Expert Chefs<small>Passionate about great food.</small></span><span>Fine Wines<small>Curated collection to pair perfectly.</small></span></div>
+        </div>
+      </article>
+
+      <article class="board-item">
+        <h2>2. Rustic Italian Restaurant</h2>
+        <div class="site-shot italian-shot">
+          <nav class="shot-nav"><strong class="script-logo">Trattoria<em>Bella Italia</em></strong><div><span>Home</span><span>About</span><span>Menu</span><span>Wine</span><span>Gallery</span><span>Contact</span></div><button>Reserve Now</button></nav>
+          <div class="italian-main">
+            <div class="italian-overlay"><small>Authentic Italian Cuisine</small><h3>A Taste of Italy<br>in Every Bite</h3><p>Traditional recipes passed down through generations, made with love and the finest ingredients.</p><div class="shot-actions"><a>View Menu</a><a>Reserve a Table</a></div></div>
+          </div>
+          <div class="paper-rip"></div>
+          <div class="shot-feature-bar paper"><span>Handmade Pasta<small>Made fresh daily</small></span><span>Local Ingredients<small>From local farms</small></span><span>Family Recipes<small>Passed down for decades</small></span><span>Fine Italian Wines<small>Perfectly paired</small></span></div>
+        </div>
+      </article>
+
+      <article class="board-item">
+        <h2>3. Asian Fusion Restaurant</h2>
+        <div class="site-shot asian-shot">
+          <nav class="shot-nav"><strong>UMAMI<em>Asian Fusion</em></strong><div><span>Home</span><span>About</span><span>Menu</span><span>Reservations</span><span>Gallery</span><span>Contact</span></div><button>Book a Table</button></nav>
+          <div class="asian-main">
+            <div class="asian-copy"><small>Where tradition meets innovation</small><h3>Bold Flavors.<br>Artful Cuisine.</h3><p>A unique fusion of Asian traditions and modern techniques, crafted to create unforgettable dining experiences.</p><div class="shot-actions"><a>Explore Menu</a><a>Reservations</a></div></div>
+            <div class="sushi-plate"><i></i><i></i><i></i></div>
+          </div>
+          <div class="shot-feature-bar black"><span>Fresh Ingredients<small>Sourced Daily</small></span><span>Modern Techniques<small>Perfected Flavors</small></span><span>Artful Presentation<small>Food Is Art</small></span><span>Unique Experience<small>Beyond Ordinary</small></span></div>
+        </div>
+      </article>
+
+      <article class="board-item">
+        <h2>4. Mexican Street Food Restaurant</h2>
+        <div class="site-shot mexican-shot">
+          <nav class="shot-nav"><strong>¡BUENOS!<em>Mexican Street Food</em></strong><div><span>Home</span><span>About</span><span>Menu</span><span>Catering</span><span>Gallery</span><span>Contact</span></div><button>Order Online</button></nav>
+          <div class="papel-picado"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="mexican-main">
+            <div class="mexican-copy"><small>Fresh. Fast. Flavorful.</small><h3>Real ingredients.<br>Bold flavors.<br>Buenos moments.</h3><p>Authentic Mexican street food made fresh every day. Eat good, feel good.</p><div class="shot-actions"><a>View Menu</a><a>Order Online</a></div></div>
+            <div class="taco-scene"><i></i><i></i><i></i></div>
+          </div>
+          <div class="shot-feature-bar teal"><span>Fresh & Authentic<small>Real ingredients, real flavors.</small></span><span>Made To Order<small>Fresh every time you order.</small></span><span>Catering & Events<small>We bring the party to you.</small></span><span>Locally Loved<small>Proudly serving our community.</small></span></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="restaurant-gallery-cta compact-cta">
+      <h2>Want one of these customized for a real restaurant?</h2>
+      <p>I can turn any direction into a unique website with the restaurant’s real menu, photos, reviews, hours, Google map, and order buttons.</p>
+      <a class="btn primary" href="index.html#contact">Request a restaurant mockup</a>
+    </section>
+  </main>
+</body>
+</html>
